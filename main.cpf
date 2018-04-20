@@ -1,0 +1,34 @@
+init height
+init width
+set height 1080
+set width 1920
+goto main
+
+println:
+init frame
+set frame "Java javax.swing.JFrame"
+arg clear
+arg 0 width
+arg 1 height
+call frame "setSize"
+arg clear
+arg 0 true
+call frame "setVisible"
+
+init thread
+set thread "Java java.lang.Thread"
+arg clear
+arg 0 1000L
+call thread "sleep"
+break
+
+main:
+
+loop:
+arg clear
+arg 0 "1"
+goto println
+goto loop
+
+
+
